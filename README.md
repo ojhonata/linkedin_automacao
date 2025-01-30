@@ -29,7 +29,7 @@ pip install selenium
 1. Clone este repositório:
 
 ```bash
-git clone https://github.com/seuusuario/linkedin_automacao.git
+git clone https://github.com/ojhonata/linkedin_automacao.git
 ```
 
 2. Acesse a pasta do projeto:
