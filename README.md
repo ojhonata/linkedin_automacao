@@ -13,7 +13,7 @@ Este é um script em **Python** que automatiza login, busca e envio de solicita�
 
 Antes de executar o script, certifique-se de ter os seguintes requisitos instalados:
 
-- Python 3.x
+- Python 3
 - Google Chrome
 - ChromeDriver (compatível com a versão do seu navegador)
 - Biblioteca Selenium
