@@ -67,7 +67,9 @@ def conectar_pessoas(navegador):
         except Exception as e:
             print(f'Erro ao enviar sem nota: {e}')
 
+# função principal para controlar o fluxo do script
 def main():
+    # configurando o navegador
     options = webdriver.ChromeOptions()
     options.add_argument('--start-maximized')
 
@@ -75,6 +77,7 @@ def main():
     navegador.get('https://www.linkedin.com/feed/')
 
     try:
+        # Realiza o login, busca pessoas e envia solicitações de conexão
         login(navegador, usuario, senha)
         buscar_pessoas(navegador, termo)
         conectar_pessoas(navegador)
@@ -82,5 +85,6 @@ def main():
         print('Fechando o navegador')
         navegador.quit()
 
+# Executa a função principal se o script for executado diretamente
 if __name__ == '__main__':
     main()
