@@ -10,6 +10,8 @@ senha = input('Digite a sua senha: ')
 termo = input('Digite o que deseja pesquisar: ')
 
 enviar_mensagem = input('Deseja enviar uma nota (s)im ou (n)ão: ').strip().lower().startswith('s')
+if enviar_mensagem:
+    nota = input('Digite a nota que deseja enviar: ')
 
 # função para digitar lentamente
 def digitar_devagar(elemento, texto, atraso=0.2):
@@ -51,7 +53,7 @@ def buscar_pessoas(navegador, termo):
 def conectar_pessoas(navegador):
     time.sleep(3)
     botao_conectar = WebDriverWait(navegador, 10).until(
-        EC.presence_of_all_elements_located((By.XPATH, '//span[text()="Conectar"]'))
+        EC.presence_of_all_elements_located((By.XPATH, '//button[contains(., "Conectar")]'))
     )
 
     for botao in botao_conectar: # itera sobre todos os botões 'Conectar'
@@ -68,30 +70,21 @@ def conectar_pessoas(navegador):
                 )
                 navegador.execute_script("arguments[0].click();", botao_adicionar_nota)
 
-                nota = input('Digite a nota que deseja enviar: ')
-
                 campo_nota = WebDriverWait(navegador, 10).until(
                     EC.presence_of_element_located((By.ID, 'custom-message'))
                 )
                 digitar_devagar(campo_nota, nota)
 
                 botao_enviar = WebDriverWait(navegador, 10).until(
-                    EC.element_to_be_clickable((By.XPATH, '//span[text()="Enviar"]'))
+                    EC.element_to_be_clickable((By.XPATH, '//button[contains(., "Enviar")]'))
                 )
                 time.sleep(1)
                 botao_enviar.click()
             
             botao_sem_nota = WebDriverWait(navegador, 10).until(
-                EC.element_to_be_clickable((By.XPATH, '//span[text()="Enviar sem nota"]'))
+                EC.element_to_be_clickable((By.XPATH, '//button[contains(., "Enviar sem nota")]'))
             )
             navegador.execute_script("arguments[0].click();", botao_sem_nota)
-            try:
-                botao_proxima_pagina = WebDriverWait(navegador, 10).until(
-                    EC.element_to_be_clickable((By.ID, 'ember533'))
-                )
-                navegador.execute_script("arguments[0].click();", botao_proxima_pagina)
-            except:
-                print('Erro ao localizar o botão da próxima página')
         except Exception as e:
             print(f'Erro ao enviar sem nota: {e}')
 
