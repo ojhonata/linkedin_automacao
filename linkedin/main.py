@@ -44,7 +44,7 @@ def buscar_pessoas(navegador, termo):
     botao_pessoa = WebDriverWait(navegador, 10).until(
     EC.element_to_be_clickable((By.XPATH, '//button[text()="Pessoas"]'))
     )
-    time.sleep(2)
+    time.sleep(3)
     botao_pessoa.click()
 
 # funçãop que envia solicitações de conexão com pessoas
@@ -78,7 +78,7 @@ def conectar_pessoas(navegador):
                 botao_enviar = WebDriverWait(navegador, 10).until(
                     EC.element_to_be_clickable((By.XPATH, '//span[text()="Enviar"]'))
                 )
-                time.sleep(5)
+                time.sleep(1)
                 botao_enviar.click()
             
             botao_sem_nota = WebDriverWait(navegador, 10).until(
