@@ -36,6 +36,7 @@ git clone https://github.com/ojhonata/linkedin_automacao.git
 
 ```bash
 cd linkedin_automacao
+cd linkedin
 ```
 
 3. Execute o script:
