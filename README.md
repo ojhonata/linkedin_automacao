@@ -58,7 +58,6 @@ Deseja enviar uma nota (s)im ou (n)ão:
 🔹 Adicionar interface gráfica para facilitar o uso\
 🔹 Melhorar a estabilidade e tratamento de erros\
 🔹 Permitir customização de mensagens personalizadas ao enviar conexão\
-🔹 Implementar suporte para múltiplos navegadores
 
 ## 💡 Contribuições e Feedback
 
