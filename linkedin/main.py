@@ -49,7 +49,7 @@ def buscar_pessoas(navegador, termo):
     time.sleep(3)
     botao_pessoa.click()
 
-# funçãop que envia solicitações de conexão com pessoas
+# função que envia solicitações de conexão com pessoas
 def conectar_pessoas(navegador):
     time.sleep(3)
     botao_conectar = WebDriverWait(navegador, 10).until(
