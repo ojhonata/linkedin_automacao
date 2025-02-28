@@ -35,8 +35,7 @@ git clone https://github.com/ojhonata/linkedin_automacao.git
 2. Acesse a pasta do projeto:
 
 ```bash
-cd linkedin_automacao
-cd linkedin
+cd linkedin_automacao/linkedin
 ```
 
 3. Execute o script:
@@ -51,14 +50,13 @@ python main.py
 Digite o seu usuário: seu-email@example.com
 Digite a sua senha: ******
 Digite o que deseja pesquisar: machine learning
+Deseja enviar uma nota (s)im ou (n)ão:
 ```
 
 ## 🔄 Futuras Atualizações
 
 🔹 Adicionar interface gráfica para facilitar o uso\
 🔹 Melhorar a estabilidade e tratamento de erros\
-🔹 Permitir customização de mensagens personalizadas ao enviar conexão\
-🔹 Implementar suporte para múltiplos navegadores
 
 ## 💡 Contribuições e Feedback
 
